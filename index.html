@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Pursuing Temporal-Consistent Video Virtual Try-On \\via Dynamic Pose Interaction</h1>
+            <h1 class="title is-1 publication-title">Pursuing Temporal-Consistent Video Virtual Try-On via Dynamic Pose Interaction</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -78,7 +78,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video virtual try-on aims to seamlessly dress a subject in a video with a specific garment. The primary challenge involves preserving the visual authenticity of the garment while dynamically adapting to the pose and physique of the subject. While existing methods have predominantly focused on image-based virtual try-on, extending these techniques directly to videos often results in temporal inconsistencies. Most current video virtual try-on approaches alleviate this challenge by incorporating temporal modules, yet still overlook the critical spatiotemporal pose interactions between human and garment. Effective pose interactions in videos should not only consider spatial alignment between human and garment poses in each frame but also account for the temporal dynamics of human poses throughout the entire video. With such motivation, we propose a new framework, namely \textbf{D}ynamic \textbf{P}ose \textbf{I}nteraction \textbf{D}iffusion \textbf{M}odels (DPIDM), to leverage diffusion models to delve into dynamic pose interactions for video virtual try-on. Technically, DPIDM introduces a skeleton-based pose adapter to integrate synchronized human and garment poses into the denoising network. A hierarchical attention module is then exquisitely designed to model intra-frame human-garment pose interactions and long-term human pose dynamics across frames through pose-aware spatial and temporal attention mechanisms. Moreover, DPIDM capitalizes on a temporal regularized attention loss between consecutive frames to enhance temporal consistency. Extensive experiments conducted on VITON-HD, VVT and ViViD datasets demonstrate the superiority of our DPIDM against the baseline methods. Notably, DPIDM achieves VFID score of 0.506 on VVT dataset, leading to 60.5\% improvement over the state-of-the-art GPD-VVTO approach.
+            Video virtual try-on aims to seamlessly dress a subject in a video with a specific garment. The primary challenge involves preserving the visual authenticity of the garment while dynamically adapting to the pose and physique of the subject. While existing methods have predominantly focused on image-based virtual try-on, extending these techniques directly to videos often results in temporal inconsistencies. Most current video virtual try-on approaches alleviate this challenge by incorporating temporal modules, yet still overlook the critical spatiotemporal pose interactions between human and garment. Effective pose interactions in videos should not only consider spatial alignment between human and garment poses in each frame but also account for the temporal dynamics of human poses throughout the entire video. With such motivation, we propose a new framework, namely Dynamic Pose Interaction Diffusion Models (DPIDM), to leverage diffusion models to delve into dynamic pose interactions for video virtual try-on. Technically, DPIDM introduces a skeleton-based pose adapter to integrate synchronized human and garment poses into the denoising network. A hierarchical attention module is then exquisitely designed to model intra-frame human-garment pose interactions and long-term human pose dynamics across frames through pose-aware spatial and temporal attention mechanisms. Moreover, DPIDM capitalizes on a temporal regularized attention loss between consecutive frames to enhance temporal consistency. Extensive experiments conducted on VITON-HD, VVT and ViViD datasets demonstrate the superiority of our DPIDM against the baseline methods. Notably, DPIDM achieves VFID score of 0.506 on VVT dataset, leading to 60.5% improvement over the state-of-the-art GPD-VVTO approach.
           </p>
         </div>
       </div>
@@ -92,17 +92,13 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          (a) Overall architecture of DPIDM. DPIDM emplys a dual-branch architecture. The main U-Net processes a concatenated input comprising the noisy latent of the video, the latent of the cloth-agnostic video, and the cloth-agnostic mask sequence. The garment U-Net extracts fine-grained garment features, which are subsequently integrated into the main U-Net. The pose estimator is utilized to extract aligned human and garment poses, which are then fed into the attention modules of the main U-Net to guide the diffusion process. The VAE is not shown for clarity. (b) Detailed illustration of the proposed pose-aware attention module within the main U-Net. The module comprises pose-aware spatial attention, temporal-shift attention, cross-attention, and pose-aware temporal attention. The pose embeddings are seamlessly integrated into the attention module through a specialized pose adapter. 
+      <div class="image-container">
+        <img src="static/images/your-image.jpg" alt="Image description" />
+        <h2 class="subtitle has-text-centered"> (a) Overall architecture of DPIDM. DPIDM emplys a dual-branch architecture. The main U-Net processes a concatenated input comprising the noisy latent of the video, the latent of the cloth-agnostic video, and the cloth-agnostic mask sequence. The garment U-Net extracts fine-grained garment features, which are subsequently integrated into the main U-Net. The pose estimator is utilized to extract aligned human and garment poses, which are then fed into the attention modules of the main U-Net to guide the diffusion process. The VAE is not shown for clarity. (b) Detailed illustration of the proposed pose-aware attention module within the main U-Net. The module comprises pose-aware spatial attention, temporal-shift attention, cross-attention, and pose-aware temporal attention. The pose embeddings are seamlessly integrated into the attention module through a specialized pose adapter. 
         </h2>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
